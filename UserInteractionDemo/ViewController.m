@@ -26,4 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)changeTextClick:(id)sender {
+    NSString *customText = self.customTextField.text;
+    self.helloLabel.text = customText;
+    [self.customTextField resignFirstResponder];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.customTextField resignFirstResponder];
+}
+
 @end
